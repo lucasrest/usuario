@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: usuario
+
+server:
+  error:
+    include-exception: false
+    include-stacktrace: NEVER
+  servlet-path: /usuario
+  servlet:
+    context-path: /usuario
+  port: 8081
+
+db-config:
+  driver-class-name:  org.postgresql.Driver
+  setMinPoolSize: 3
+  setAcquireIncrement: 5
+  setMaxPoolSize: 50
+  setMaxStatements: 180
+  setIdleTimeOut: 30000
+  setConnectionTimeout: 10000
+  setMaxLifeTime: 300000

@@ -1,0 +1,4 @@
+db-config:
+  url: jdbc:postgresql://${DATABASE_URL}/usuario_db
+  username: ${DATABASE_USER}
+  password: ${DATABASE_PASSWORD}
