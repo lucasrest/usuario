@@ -1,4 +1,4 @@
 db-config:
-  url: jdbc:postgresql://localhost:5432/usuario_db
+  url: jdbc:postgresql://localhost:5432/cadastro_db
   username: postgres
   password: 123456

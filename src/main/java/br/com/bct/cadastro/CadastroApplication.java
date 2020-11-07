@@ -1,13 +1,13 @@
-package br.com.bct.usuario;
+package br.com.bct.cadastro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UsuarioApplication {
+public class CadastroApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UsuarioApplication.class, args);
+        SpringApplication.run(CadastroApplication.class, args);
     }
 
 }

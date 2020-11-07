@@ -1,15 +1,15 @@
 spring:
   application:
-    name: usuario
+    name: cadastro
 
 server:
   error:
     include-exception: false
     include-stacktrace: NEVER
-  servlet-path: /usuario
+  servlet-path: /cadastro
   servlet:
-    context-path: /usuario
-  port: 8081
+    context-path: /cadastro
+  port: 8080
 
 db-config:
   driver-class-name:  org.postgresql.Driver

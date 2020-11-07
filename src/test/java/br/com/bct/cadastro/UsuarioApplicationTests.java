@@ -1,4 +1,4 @@
-package br.com.bct.usuario;
+package br.com.bct.cadastro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
