@@ -1,15 +1,15 @@
 spring:
   application:
-    name: cadastro
+    name: usuario
 
 server:
   error:
     include-exception: false
     include-stacktrace: NEVER
-  servlet-path: /cadastro
+  servlet-path: /usuario
   servlet:
-    context-path: /cadastro
-  port: 8080
+    context-path: /usuario
+  port: 8081
 
 db-config:
   driver-class-name:  org.postgresql.Driver
@@ -20,3 +20,19 @@ db-config:
   setIdleTimeOut: 30000
   setConnectionTimeout: 10000
   setMaxLifeTime: 300000
+
+security:
+  oauth:
+    client-id: cielo
+    scope: admin
+    grant-types: password, refresh_token
+    signing-key: ldap-cielo
+    token-encoder: password
+    expiration-token: 86400
+    expiration-refresh-token: 86400
+  cryptography:
+    algorithm-key: RSA
+    algorithm: RSA/ECB/PKCS1Padding
+    key:
+      private: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKEvJcopo4Tsh+3JvcQkfuDuE12IsXgS0nXwsaB385g7gHTOVQD4NSzFB99aPOJvwInn5OMCtfE9hC21lZl+3z0v2EwiQqT4rRnbKwCoM7D6MSjVzJ9OxagHTBYfGsHmjTlrtrZicZE5GaCU1x6zXA4Dvq9dhsZrDaD675czWbCVAgMBAAECgYA9yxp8v6vd2ORfyDkFSkyOJRetgysucmDXMFiYwYPU9/LOVRAHmCCiskLLYQf4c4loFUwNr8ta2g+jinr45sfkScPEnRMtRGePqYB/zqwkH5zxklwKloTuHsZ805onCAE0V4YYGRxqhwcRFnlE/sGOMc4wkJ0WTkTnEh5JfQiwYQJBAPUNwQ1ef7wwKDXmmtAYzYLt9aw1YEU+/nh2pjtIhzZVYczdIRb1TB9LIvlG/phv8giyT3vtPkQUR+IWOBFNuukCQQCoYlNmZ+BSYDsBkXRaBBkDCQdWFIVtfE3B75N4HOiX8gX5KUkrm9wT5BHkxyQ7Qbp6WLJsvrkD6+pXghYDWGTNAkEAwZ4la2+/0yvliXjz1vnR3uIvGuptbyjvnLR6cRrEIozhoiERlPcpNwyBzJ1oaX8BqBdir9LqQJYZmavejuVwiQJAAag+E+Lv1T+3NPO+hmhF6r67AMDg80vm5AK8m9EFBQHPxzz9yF0XVGbJOkwvchnagPvAfct+vKgkvUm9d7j1/QJBALfhhpQPtAmFdWRq5Qu/kbf+/DC5GfM4Xz7Tn/bo6T2p8XvEOTDypjsh1C8Vnbc7JLsEssjmFcZr9Vs8RmNNfTc=
+      public: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChLyXKKaOE7Iftyb3EJH7g7hNdiLF4EtJ18LGgd/OYO4B0zlUA+DUsxQffWjzib8CJ5+TjArXxPYQttZWZft89L9hMIkKk+K0Z2ysAqDOw+jEo1cyfTsWoB0wWHxrB5o05a7a2YnGRORmglNces1wOA76vXYbGaw2g+u+XM1mwlQIDAQAB
